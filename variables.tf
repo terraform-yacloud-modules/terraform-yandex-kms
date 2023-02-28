@@ -11,12 +11,12 @@ variable "folder_id" {
 # naming
 #
 variable "name" {
-  description = "Name of lockbox secret"
+  description = "KMS key name"
   type        = string
 }
 
 variable "description" {
-  description = "Description of the security group"
+  description = "KMS Key description"
   type        = string
   default     = ""
 }
