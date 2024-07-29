@@ -16,9 +16,9 @@ variable "name" {
 }
 
 variable "description" {
-  description = "KMS Key description"
+  description = "An optional description of the key."
   type        = string
-  default     = ""
+  default     = null
 }
 
 variable "labels" {
@@ -31,13 +31,13 @@ variable "labels" {
 # kms configuration
 #
 variable "default_algorithm" {
-  description = " Encryption algorithm to be used for this key"
+  description = "Encryption algorithm to be used for this key"
   type        = string
-  default     = "AES_128"
+  default     = "AES_128" # AES_128, AES_192, AES_256
 }
 
 variable "rotation_period" {
   description = "Interval between automatic rotations. To disable automatic rotation, set this parameter equal to null"
   type        = string
-  default     = "8760h"
+  default     = "8760h" # equal to 1 year
 }

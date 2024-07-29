@@ -39,7 +39,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_default_algorithm"></a> [default\_algorithm](#input\_default\_algorithm) | Encryption algorithm to be used for this key | `string` | `"AES_128"` | no |
-| <a name="input_description"></a> [description](#input\_description) | KMS Key description | `string` | `""` | no |
+| <a name="input_description"></a> [description](#input\_description) | An optional description of the key. | `string` | `null` | no |
 | <a name="input_folder_id"></a> [folder\_id](#input\_folder\_id) | Folder ID | `string` | `null` | no |
 | <a name="input_labels"></a> [labels](#input\_labels) | A set of labels | `map(string)` | `{}` | no |
 | <a name="input_name"></a> [name](#input\_name) | KMS key name | `string` | n/a | yes |
@@ -49,7 +49,7 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_id"></a> [id](#output\_id) | KMS ID |
+| <a name="output_id"></a> [id](#output\_id) | The unique identifier of the KMS symmetric key. |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## License
