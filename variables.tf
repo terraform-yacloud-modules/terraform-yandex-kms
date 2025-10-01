@@ -18,6 +18,11 @@ variable "folder_id" {
 variable "name" {
   description = "KMS key name"
   type        = string
+
+  validation {
+    condition     = can(regex("^[a-z0-9-]{1,63}$", var.name))
+    error_message = "The name must be 1-63 characters long and contain only lowercase letters, numbers, and hyphens."
+  }
 }
 
 variable "description" {
