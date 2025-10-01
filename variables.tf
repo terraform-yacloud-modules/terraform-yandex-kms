@@ -49,6 +49,11 @@ variable "default_algorithm" {
   description = "Encryption algorithm to be used for this key"
   type        = string
   default     = "AES_128" # AES_128, AES_192, AES_256
+
+  validation {
+    condition     = contains(["AES_128", "AES_192", "AES_256"], var.default_algorithm)
+    error_message = "The default_algorithm must be one of: AES_128, AES_192, AES_256."
+  }
 }
 
 variable "rotation_period" {
