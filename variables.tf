@@ -29,6 +29,11 @@ variable "description" {
   description = "An optional description of the key."
   type        = string
   default     = null
+
+  validation {
+    condition     = var.description == null || length(var.description) <= 256
+    error_message = "The description must be 256 characters or less."
+  }
 }
 
 variable "labels" {
