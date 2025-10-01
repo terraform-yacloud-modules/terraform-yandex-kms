@@ -60,4 +60,9 @@ variable "rotation_period" {
   description = "Interval between automatic rotations. To disable automatic rotation, set this parameter equal to null"
   type        = string
   default     = "8760h" # equal to 1 year
+
+  validation {
+    condition = var.rotation_period == null || can(regex("^[0-9]+(h|m|s)$", var.rotation_period))
+    error_message = "The rotation_period must be a valid duration string (e.g., '8760h', '24h', '30m') or null to disable rotation."
+  }
 }
