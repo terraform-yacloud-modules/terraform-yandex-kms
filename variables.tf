@@ -5,6 +5,11 @@ variable "folder_id" {
   description = "Folder ID"
   type        = string
   default     = null
+
+  validation {
+    condition     = var.folder_id == null || can(regex("^[a-z0-9]{20}$", var.folder_id))
+    error_message = "The folder_id must be a valid Yandex Cloud folder ID (20 character alphanumeric string) or null."
+  }
 }
 
 #
