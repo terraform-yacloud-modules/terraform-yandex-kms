@@ -6,4 +6,12 @@ module "kms_key" {
   labels            = { "environment" = "production" }
   default_algorithm = "AES_256" # AES_128, AES_192, AES_256
   rotation_period   = "4380h"   # equal to 6 months
+
+
+  timeouts = {
+    create = "45m"
+    update = "45m"
+    delete = "45m"
+  }
+
 }

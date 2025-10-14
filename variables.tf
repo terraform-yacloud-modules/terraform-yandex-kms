@@ -41,3 +41,13 @@ variable "rotation_period" {
   type        = string
   default     = "8760h" # equal to 1 year
 }
+
+variable "timeouts" {
+  description = "Timeout settings for cluster operations"
+  type = object({
+    create = optional(string)
+    update = optional(string)
+    delete = optional(string)
+  })
+  default = null
+}
