@@ -42,6 +42,12 @@ variable "rotation_period" {
   default     = "8760h" # equal to 1 year
 }
 
+variable "deletion_protection" {
+  description = "Whether the key is protected from deletion. If true, the key cannot be deleted"
+  type        = bool
+  default     = false
+}
+
 variable "timeouts" {
   description = "Timeout settings for cluster operations"
   type = object({

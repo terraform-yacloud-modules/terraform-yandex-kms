@@ -39,17 +39,22 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_default_algorithm"></a> [default\_algorithm](#input\_default\_algorithm) | Encryption algorithm to be used for this key | `string` | `"AES_128"` | no |
+| <a name="input_deletion_protection"></a> [deletion\_protection](#input\_deletion\_protection) | Whether the key is protected from deletion. If true, the key cannot be deleted | `bool` | `false` | no |
 | <a name="input_description"></a> [description](#input\_description) | An optional description of the key. | `string` | `null` | no |
 | <a name="input_folder_id"></a> [folder\_id](#input\_folder\_id) | Folder ID | `string` | `null` | no |
 | <a name="input_labels"></a> [labels](#input\_labels) | A set of labels | `map(string)` | `{}` | no |
 | <a name="input_name"></a> [name](#input\_name) | KMS key name | `string` | n/a | yes |
 | <a name="input_rotation_period"></a> [rotation\_period](#input\_rotation\_period) | Interval between automatic rotations. To disable automatic rotation, set this parameter equal to null | `string` | `"8760h"` | no |
+| <a name="input_timeouts"></a> [timeouts](#input\_timeouts) | Timeout settings for cluster operations | <pre>object({<br/>    create = optional(string)<br/>    update = optional(string)<br/>    delete = optional(string)<br/>  })</pre> | `null` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
+| <a name="output_created_at"></a> [created\_at](#output\_created\_at) | Creation timestamp of the KMS symmetric key. |
 | <a name="output_id"></a> [id](#output\_id) | The unique identifier of the KMS symmetric key. |
+| <a name="output_rotated_at"></a> [rotated\_at](#output\_rotated\_at) | Last rotation timestamp of the KMS symmetric key. |
+| <a name="output_status"></a> [status](#output\_status) | Status of the KMS symmetric key. |
 <!-- END_TF_DOCS -->
 
 ## License
