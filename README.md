@@ -4,13 +4,14 @@ Terraform module which creates Yandex Cloud KMS resources.
 
 ## Input Validation
 
-This module includes comprehensive input validation to ensure configuration correctness and provide clear error messages:
+This module includes input validation to catch configuration errors early and provide clear error messages:
 
 - **`default_algorithm`**: Must be one of `AES_128`, `AES_192`, or `AES_256`
 - **`rotation_period`**: Must be a valid duration string (e.g., `8760h`, `24h`, `30m`) or `null` to disable rotation
-- **`name`**: Must be 1-63 characters long and contain only lowercase letters, numbers, and hyphens
-- **`folder_id`**: Must be a valid 20-character alphanumeric Yandex Cloud folder ID or `null`
+- **`name`**: Must be 1-63 characters long (Yandex Cloud accepts various characters including special symbols)
 - **`description`**: Must be 256 characters or less or `null`
+
+**Note**: The `folder_id` field does not have client-side validation as Yandex Cloud accepts various formats. Validation occurs during `terraform apply`.
 
 These validations help catch configuration errors early during `terraform plan` rather than during `terraform apply`.
 

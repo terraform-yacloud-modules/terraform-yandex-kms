@@ -6,10 +6,8 @@ variable "folder_id" {
   type        = string
   default     = null
 
-  validation {
-    condition     = var.folder_id == null || can(regex("^[a-z0-9]{20}$", var.folder_id))
-    error_message = "The folder_id must be a valid Yandex Cloud folder ID (20 character alphanumeric string) or null."
-  }
+  # Note: folder_id validation removed as Yandex Cloud provider accepts various formats
+  # The provider will validate the format at apply time
 }
 
 #
@@ -20,8 +18,8 @@ variable "name" {
   type        = string
 
   validation {
-    condition     = can(regex("^[a-z0-9-]{1,63}$", var.name))
-    error_message = "The name must be 1-63 characters long and contain only lowercase letters, numbers, and hyphens."
+    condition     = length(var.name) >= 1 && length(var.name) <= 63
+    error_message = "The name must be 1-63 characters long."
   }
 }
 
