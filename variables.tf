@@ -18,8 +18,8 @@ variable "name" {
   type        = string
 
   validation {
-    condition     = length(var.name) >= 1 && length(var.name) <= 63
-    error_message = "The name must be 1-63 characters long."
+    condition     = length(var.name) >= 1 && length(var.name) <= 63 && can(regex("^[a-z][a-z0-9-]*[a-z0-9]$", var.name)) && !can(regex("[!_@#$%^&*()+=|<>?{}\\[\\]~]", var.name))
+    error_message = "The name must be 1-63 characters long, start with a lowercase letter, contain only lowercase letters, numbers, and hyphens, end with a letter or number, and must not contain special characters like !_@#$%^&*()+=|<>?{}[]~."
   }
 }
 
@@ -60,8 +60,8 @@ variable "rotation_period" {
   default     = "8760h" # equal to 1 year
 
   validation {
-    condition = var.rotation_period == null || can(regex("^[0-9]+(h|m|s)$", var.rotation_period))
-    error_message = "The rotation_period must be a valid duration string (e.g., '8760h', '24h', '30m') or null to disable rotation."
+    condition     = var.rotation_period == null || (can(regex("^[0-9]+(h|m|s)$", var.rotation_period)) && !can(regex("^-", var.rotation_period)))
+    error_message = "The rotation_period must be a valid positive duration string (e.g., '8760h', '24h', '30m') or null to disable rotation. Negative values are not allowed."
   }
 }
 
