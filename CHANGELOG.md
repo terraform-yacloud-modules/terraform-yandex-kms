@@ -1,3 +1,8 @@
+## v1.37.0 - 2026-02-24
+### Miscellaneous
+- b906fe4 Merge pull request [#94](https://github.com/terraform-yacloud-modules/terraform-yandex-kms/pull/94) from terraform-yacloud-modules/dependabot/github_actions/kvendingoldo/git-flow-action-2.16.0
+- ead706e build(deps): bump kvendingoldo/git-flow-action from 2.2.0 to 2.16.0
+
 ## v1.36.0
 ## v1.35.0
 ## v1.34.0
