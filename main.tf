@@ -1,5 +1,11 @@
+data "yandex_client_config" "client" {}
+
+locals {
+  folder_id = coalesce(var.folder_id, data.yandex_client_config.client.folder_id)
+}
+
 resource "yandex_kms_symmetric_key" "this" {
-  folder_id = var.folder_id
+  folder_id = local.folder_id
 
   name        = var.name
   description = var.description
