@@ -48,6 +48,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [yandex_kms_symmetric_key.this](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/kms_symmetric_key) | resource |
+| [yandex_client_config.client](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/data-sources/client_config) | data source |
 
 ## Inputs
 
@@ -60,7 +61,7 @@ No modules.
 | <a name="input_labels"></a> [labels](#input\_labels) | A set of labels | `map(string)` | `{}` | no |
 | <a name="input_name"></a> [name](#input\_name) | KMS key name | `string` | n/a | yes |
 | <a name="input_rotation_period"></a> [rotation\_period](#input\_rotation\_period) | Interval between automatic rotations. To disable automatic rotation, set this parameter equal to null | `string` | `"8760h"` | no |
-| <a name="input_timeouts"></a> [timeouts](#input\_timeouts) | Timeout settings for key operations (create, update, delete) | <pre>object({<br/>    create = optional(string)<br/>    update = optional(string)<br/>    delete = optional(string)<br/>  })</pre> | `null` | no |
+| <a name="input_timeouts"></a> [timeouts](#input\_timeouts) | Timeout settings for key operations | <pre>object({<br/>    create = optional(string)<br/>    update = optional(string)<br/>    delete = optional(string)<br/>  })</pre> | `null` | no |
 
 ## Outputs
 

@@ -1,11 +1,11 @@
 module "kms_key" {
   source = "../../"
 
-  name                 = "lockbox-key"
-  description          = "KMS key for Lockbox secret encryption"
-  default_algorithm    = "AES_256"
-  rotation_period      = "8760h"
-  deletion_protection  = false
+  name                = "lockbox-key"
+  description         = "KMS key for Lockbox secret encryption"
+  default_algorithm   = "AES_256"
+  rotation_period     = "8760h"
+  deletion_protection = false
 }
 
 resource "yandex_lockbox_secret" "this" {
