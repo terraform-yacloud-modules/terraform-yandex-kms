@@ -72,7 +72,7 @@ variable "deletion_protection" {
 }
 
 variable "timeouts" {
-  description = "Timeout settings for cluster operations"
+  description = "Timeout settings for key operations"
   type = object({
     create = optional(string)
     update = optional(string)
