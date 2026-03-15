@@ -1,3 +1,7 @@
+## v1.39.0 - 2026-03-15
+### Miscellaneous
+- 211b3d0 new example with KMS key + Lockbox secret ([#96](https://github.com/terraform-yacloud-modules/terraform-yandex-kms/pull/96))
+
 ## v1.38.0 - 2026-03-02
 ### Miscellaneous
 - bb447a6 Merge pull request [#95](https://github.com/terraform-yacloud-modules/terraform-yandex-kms/pull/95) from terraform-yacloud-modules/dependabot/github_actions/hashicorp/setup-terraform-4
