@@ -1,3 +1,7 @@
+## v1.40.0 - 2026-08-29
+### Miscellaneous
+- 9ef461c build(deps): bump actions/cache from 5.0.3 to 5.0.5 ([#98](https://github.com/terraform-yacloud-modules/terraform-yandex-kms/pull/98))
+
 ## v1.39.0 - 2026-03-15
 ### Miscellaneous
 - 211b3d0 new example with KMS key + Lockbox secret ([#96](https://github.com/terraform-yacloud-modules/terraform-yandex-kms/pull/96))
