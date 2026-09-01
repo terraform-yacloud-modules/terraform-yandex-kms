@@ -1,3 +1,8 @@
+## v1.42.0 - 2026-09-01
+### Miscellaneous
+- 4cc98f1 Merge pull request [#100](https://github.com/terraform-yacloud-modules/terraform-yandex-kms/pull/100) from terraform-yacloud-modules/dependabot/github_actions/actions/checkout-7
+- 258630a build(deps): bump actions/checkout from 6 to 7
+
 ## v1.41.0 - 2026-09-01
 ### Miscellaneous
 - 8d848fb build(deps): bump actions/cache from 5.0.5 to 6.1.0 ([#99](https://github.com/terraform-yacloud-modules/terraform-yandex-kms/pull/99))
