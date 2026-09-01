@@ -1,3 +1,7 @@
+## v1.41.0 - 2026-09-01
+### Miscellaneous
+- 8d848fb build(deps): bump actions/cache from 5.0.5 to 6.1.0 ([#99](https://github.com/terraform-yacloud-modules/terraform-yandex-kms/pull/99))
+
 ## v1.40.0 - 2026-08-29
 ### Miscellaneous
 - 9ef461c build(deps): bump actions/cache from 5.0.3 to 5.0.5 ([#98](https://github.com/terraform-yacloud-modules/terraform-yandex-kms/pull/98))
