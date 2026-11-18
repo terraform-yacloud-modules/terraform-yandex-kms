@@ -1,3 +1,7 @@
+## v1.43.0 - 2026-11-18
+### Miscellaneous
+- 5fbedf6 ci: run semver job only on push to main ([#102](https://github.com/terraform-yacloud-modules/terraform-yandex-kms/pull/102))
+
 ## v1.42.0 - 2026-09-01
 ### Miscellaneous
 - 4cc98f1 Merge pull request [#100](https://github.com/terraform-yacloud-modules/terraform-yandex-kms/pull/100) from terraform-yacloud-modules/dependabot/github_actions/actions/checkout-7
