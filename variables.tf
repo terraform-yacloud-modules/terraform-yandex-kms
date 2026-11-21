@@ -29,7 +29,7 @@ variable "description" {
   default     = null
 
   validation {
-    condition     = var.description == null || length(var.description) <= 256
+    condition     = var.description == null ? true : length(var.description) <= 256
     error_message = "The description must be 256 characters or less."
   }
 }
@@ -75,6 +75,7 @@ variable "timeouts" {
   description = "Timeout settings for key operations"
   type = object({
     create = optional(string)
+    read   = optional(string)
     update = optional(string)
     delete = optional(string)
   })

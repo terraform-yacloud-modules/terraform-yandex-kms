@@ -1,6 +1,7 @@
 module "kms_key" {
   source = "../../"
 
+  folder_id           = var.folder_id
   name                = "my-symmetric-key"
   description         = "My symmetric key description"
   labels              = { "environment" = "production" }
@@ -10,6 +11,7 @@ module "kms_key" {
 
   timeouts = {
     create = "45m"
+    read   = "15m"
     update = "45m"
     delete = "45m"
   }
