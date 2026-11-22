@@ -1,3 +1,7 @@
+## v1.44.0 - 2026-11-22
+### Features
+- 5ee5b14 feat: add read timeout support and folder_id to examples ([#101](https://github.com/terraform-yacloud-modules/terraform-yandex-kms/pull/101))
+
 ## v1.43.0 - 2026-11-18
 ### Miscellaneous
 - 5fbedf6 ci: run semver job only on push to main ([#102](https://github.com/terraform-yacloud-modules/terraform-yandex-kms/pull/102))
