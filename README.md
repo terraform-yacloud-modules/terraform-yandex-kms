@@ -31,13 +31,13 @@ maintainers to test your changes and to keep the examples up to date for users. 
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3 |
-| <a name="requirement_yandex"></a> [yandex](#requirement\_yandex) | >= 0.72.0 |
+| <a name="requirement_yandex"></a> [yandex](#requirement\_yandex) | >= 0.92.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_yandex"></a> [yandex](#provider\_yandex) | >= 0.72.0 |
+| <a name="provider_yandex"></a> [yandex](#provider\_yandex) | >= 0.92.0 |
 
 ## Modules
 
@@ -61,7 +61,7 @@ No modules.
 | <a name="input_labels"></a> [labels](#input\_labels) | A set of labels | `map(string)` | `{}` | no |
 | <a name="input_name"></a> [name](#input\_name) | KMS key name | `string` | n/a | yes |
 | <a name="input_rotation_period"></a> [rotation\_period](#input\_rotation\_period) | Interval between automatic rotations. To disable automatic rotation, set this parameter equal to null | `string` | `"8760h"` | no |
-| <a name="input_timeouts"></a> [timeouts](#input\_timeouts) | Timeout settings for key operations | <pre>object({<br/>    create = optional(string)<br/>    update = optional(string)<br/>    delete = optional(string)<br/>  })</pre> | `null` | no |
+| <a name="input_timeouts"></a> [timeouts](#input\_timeouts) | Timeout settings for key operations | <pre>object({<br/>    create = optional(string)<br/>    read   = optional(string)<br/>    update = optional(string)<br/>    delete = optional(string)<br/>  })</pre> | `null` | no |
 
 ## Outputs
 

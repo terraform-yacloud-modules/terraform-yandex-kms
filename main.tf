@@ -19,6 +19,7 @@ resource "yandex_kms_symmetric_key" "this" {
     for_each = var.timeouts == null ? [] : [var.timeouts]
     content {
       create = try(timeouts.value.create, null)
+      read   = try(timeouts.value.read, null)
       update = try(timeouts.value.update, null)
       delete = try(timeouts.value.delete, null)
     }
